@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Khối 10 - Lớp 10T1</title>
+	<style>
+		body {
+			font-family:Arial;	
+		}
+	  .header {
+      height: 100px;
+      background-color: whitesmoke;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;	
+	  }
+    .logopic {
+      width: 180px;
+      height:80px;
+      object-fit: cover;
+      border-width:3px;
+      position:absolute;
+      left: 25px;
+      top: 10px;
+      bottom: 10px;
+  	}	
+  	.total {
+  		margin:0 auto;
+  		margin-top:130px;  		
+  		display: flex;
+  		flex-direction:column;
+  	}
+  	.input_form {
+  		margin: 0 auto;
+  		padding:2rem;
+  		border:1px solid;
+  		border-radius:5px;
+  	}
+  	.inputdata {
+  		margin-top:20px;
+  		display: flex;
+  		flex-direction:row;
+  		justify-content:space-between;
+  	}
+  	.vipham {
+  		height:30px;
+  		font-size: 16px;
+  		padding-left: 5px;
+  		margin-right:15px;
+  		width: 350px;
+   	}
+  	.sohsinh {
+  		width: 143px;
+  		height:30px;
+  		font-size:16px;  		
+  	}
+  	.sub_but {
+  		margin-top:15px;
+  		background-color:rgba(0, 0, 255, 1);
+  		color: white;
+  		border:none;
+  		border-radius:5px;
+  		width:40px;
+  		height: 30px;
+  	}
+  	.sub_but:active {
+  		opacity: 0.6;
+  	}
+  	.list {
+  		margin:0 auto;
+  		display: flex;
+  		flex-direction:column;
+  		max-width:800px;
+  	}
+  	.noidung {
+  		margin:0 auto;
+  		border:1px solid black;
+  		border-radius:5px;
+  		margin-top: 15px;
+  		padding:1.5rem 1.5rem; 
+  		width: 550px;
+  	}
+  	.tieu_de {
+  		text-align: center;
+  		margin-top: 20px;
+  		font-size: 30px;  		
+  	}
+
+   	@media (max-width:620px) {
+  		.inputdata {
+  			flex-direction:column;
+  		}
+  		.sohsinh {
+  			margin-left:0px;
+  			margin:20px 0;
+  		}
+  		.sub_but {
+  			margin-top:0px;
+  		}
+  		.noidung {
+  			width:383px;
+  		}
+  		.vipham {
+  			margin-right:0;
+  		}
+  	}
+
+  	@media (max-width:460px) {
+  		.tieu_de {
+  			font-size:23px;
+  		}
+  		.noidung {
+  			font-size:15px;
+  			width: 333px;
+  			padding:1rem 0.9rem;
+  		}
+  		.vipham {
+  			width: 300px;
+  		}
+  		.input_form {
+  			padding:1rem 1.4rem;
+  		}
+  	}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<a href="template.html">
+   		<img class="logopic" src="C:\Users\User\Downloads\Management School (3).png">
+   	</a>
+   </div>
+  <div class="total">
+  	<div class="input_form">
+	  	<div style="
+	  		font-size:36px;
+	  		font-weight:500;
+	  	">Lớp 10T1</div>
+	  	<p style="
+	  		margin-bottom: 0;
+	  	">Nhập lỗi vi phạm:</p>
+	  	<div class="inputdata">
+	  		<input class="vipham" list="options" type="text" id="vipham" placeholder="Loại vi phạm">
+	  		<datalist id="options">
+	  			<option value="Đi trễ sau tiếng trống thứ nhất">
+	  			<option value="Nghỉ học CP">
+	  			<option value="Không sinh hoạt chào cờ">
+	  			<option value="Không tham dự các buổi lễ, buổi triệu tập của nhà trường">
+	  			<option value="Không đeo phù hiệu">
+	  			<option value="Không đeo huy hiệu đoàn">
+	  			<option value="Không học bài, không làm bài tập">
+	  			<option value="Không mang dụng cụ học tập">
+	  			<option value="Nghỉ học KP">
+	  			<option value="Không đúng đồng phục">
+	  			<option value="Giày dép không đúng quy định">
+	  			<option value="Trang điểm">
+	  			<option value="Ồn ào, mất trật tự, không tập trung trong giờ học">
+	  			<option value="Nói chuyện riêng, làm việc riêng khi dự lễ">
+	  			<option value="Không có khăn trải bàn GV, khăn trải bàn dơ">
+	  			<option value="Không có bình bông bàn GV">
+	  			<option value="Sàn dơ">
+	  			<option value="Bảng dơ">
+	  			<option value="Bàn ghế dơ">
+	  			<option value="Xả rác">
+	  			<option value="Mang đồ ăn thức uống vào lớp">
+	  			<option value="Không nghiêm túc trong giờ kiểm tra, quay cóp">
+	  			<option value="Sử dụng điện thoại di động trong giờ học, kiểm tra">
+	  			<option value="Đánh nhau">
+	  			<option value="Bè nhóm gây mất đoàn kết">
+	  			<option value="Xúc phạm nhân phẩm người khác">
+	  			<option value="Nói tục, chửi thề">
+	  		</datalist>
+	  		<input class="sohsinh" type="text" id="sohsinh" placeholder="Số học sinh vi phạm">	
+	  	</div>
+	  	<button class="sub_but" onclick="addVipham()">Add</button>
+  	</div>
+  	<div class="list">
+	  	<div class="tieu_de">
+	  		Bảng các vi phạm trong ngày
+	  	</div>
+  	<div class="noidung">
+			<div id="time1"></div>
+	  	<div id="mon"></div>
+	  	
+	  	<div id="time2"></div>
+	  	<div id="tue"></div>
+	  	
+	  	<div id="time3"></div>
+	  	<div id="wed"></div>
+	  	
+	  	<div id="time4"></div>
+	  	<div id="thu"></div>
+	  	
+	  	<div id="time5"></div>
+	  	<div id="fri"></div>
+	  	
+	  	<div id="time6"></div>
+	  	<div id="sat"></div>
+  	</div>
+	  		  	
+	  	<div id="score"></div>
+  	</div>
+  	<script src="10T1.js"></script>
+  </div>
+</body>
+</html>
