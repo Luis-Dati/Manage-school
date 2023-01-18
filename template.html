@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family:sans-serif;
+            background-color:whitesmoke;
+            height: 1000px;
+            margin:0;
+        }
+        .header {
+            height: 95px;
+            background-color: whitesmoke;
+            position: sticky;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+        .logo-container {
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            font-family:sans-serif;
+            font-size:23px;
+            font-weight:700;
+            padding:7px 16px;
+        }
+        .logopic {
+            width: 82px;
+            height:82px;
+            object-fit: cover;
+            margin-right:0.8rem;
+        }
+        .intro {
+            padding-top:8rem;
+            padding-bottom:8rem;
+            background-color: #1b2026;
+            margin-top:10px;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .container_intro {
+            display: flex;
+            flex-direction:row;
+            width:800px ;
+        }
+        @media (max-width:800px) {
+            .container_intro {
+                flex-direction:column;
+            }
+        }
+        .log_but {
+            font-size:15.7px;
+            font-weight: bold;
+            height: 55px;
+            width: 159px;
+            background-color: white;
+            color:#232323;
+            border: none;
+            border-radius:5px;
+        }
+        .log_but:hover {
+            text-decoration: underline;
+            cursor:pointer;
+        }
+        .log_but:active {
+            opacity:0.5;
+        }
+        .content {
+            display:flex;
+            flex:1.5;
+            flex-direction:column;
+            justify-content:center;
+            align-items: center;
+        }
+        .login {
+            display:flex;
+            flex:1;
+            justify-content:center;
+            align-items:center;
+            padding-left: 10px;
+        }
+        .func {
+            background-color:white;
+            display: flex;
+            flex-direction:column;
+            padding:3rem 0rem 6rem;
+            margin-top:25px;
+        }
+        .container_func {
+            display: flex;
+            flex-direction: row;
+        }
+        .grd {
+            background-color:#1b2026;
+            padding: 1rem 1rem;
+            margin:0px 30px 0px 30px;
+            font-size:29px;
+            color:white;
+            font-weight:bold;
+        } 
+        .grd:hover {
+            background-color:#efefef;
+            color:black;
+            transition: 0.5s
+        }
+        @media (min-width:700px) {
+            .container_func {
+                display: grid;
+                grid-template-columns:1fr 1fr 1fr;
+                row-gap: 10px;
+                text-align:center;
+            }
+            .grd {
+                max-width: 300px;
+            } 
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div>
+                <a href="template.html">
+                    <img class="logopic" src="ms-high-resolution-logo-color-on-transparent-background.png">
+                </a>     
+            </div>
+            <div>Management Shool</div>  
+        </div>        
+    </header>
+    <div class="intro">
+        <div class="container_intro">
+            <div class="content">
+                <p style="
+                    margin-top: 0;
+                    font-size: 20px;
+                    color: #BBBBBB;
+                    font-weight:bold;
+                ">Welcome to our website</p>
+                <p style="
+                    margin-top:0;
+                    font-size: 50px;
+                    color:white;
+                    font-weight:bold;
+                    text-align:center;
+                ">Management Shool</p>
+            </div>
+            <div class="login">
+                <button class="log_but" onclick="log()">Log in</button>
+            </div>
+        </div>
+    </div>
+    <div class="func">
+        <p style="
+            font-size:56px;
+            color:#232323;
+            font-weight:bold;
+            text-align: center;
+            margin:0;
+            padding:0px 15px 48px
+        ">Khối học</p>
+        <div class="container_func">
+            <div class="grd" id="grd10">
+                <p>Khối 10</p>
+            </div>
+            <div class="grd" id="grd11">
+                <p>Khối 11</p>
+            </div>
+            <div class="grd" id="grd12">
+                <p>Khối 12</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function log() {
+            window.location.href = "login.html"
+        }
+    </script>
+</body>
+</html>
