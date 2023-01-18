@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<style>
+		.log {
+			width: 300px;
+			height: 350px;
+			border: 1px solid #000000;
+			border-radius: 10px;
+			margin:0 auto;
+			margin-top:150px;
+			text-align: center;
+			background-color:lightblue;	
+		}
+		input {
+			border-radius: 5px;
+			font-size: 16px;
+			margin-bottom: 10px;
+			padding-left: 20px;
+			border-width:1px;
+			height:30px;
+		}
+		input:active,
+		input:hover {
+			border-color:blue;
+		}
+		button {
+			height: 30px;
+			background-color:blue;
+			border-width:0px;
+			border-radius: 5px;
+			color:white;
+			font-weight: bold;
+			opacity:0.7;
+			width:100px;
+			margin-left:120px;
+		}
+		button:active {
+			opacity:1.6;
+		}
+	</style>
+</head>
+<body background="https://msmobile.com.vn/upload_images/images/hinh-nen-powerpoint-mau-xanh-da-troi-1.jpg" onload="clogin()">
+	<div class="log" >
+		<div style="font-size: 20px;">
+			<p>Chào mừng bạn đã đến với Management School</p>
+		</div>
+		<p style="font-size: 25px;">
+			Đăng nhập
+		</p> 
+		<input id="sdthoai" type="text" placeholder="Số điện thoại">
+		<input id="mkhau" type="password" placeholder="Mật khẩu">
+		<button onclick="dgnp()">
+			Đăng nhập
+		</button>
+		<p>*Nếu bạn quên mật khẩu, hãy liên hệ với admin để được cấp lại tài khoản<p>
+	</div>
+	<script>
+		let tkhoans = [{
+			sdt:"0123456",
+			mk:"12345",
+		},{
+			sdt:"98765",
+			mk:"09871",
+		},{
+			sdt:"033443",
+			mk:"12342",
+		}];
+ 
+ 		let isLogin = false;
+		function clogin() {
+			if (isLogin) {
+				window.location.href = "template.html";
+			}
+		}
+
+		function dgnp() {
+			const sdt = document.getElementById('sdthoai').value;
+			const mk = document.getElementById('mkhau').value;	
+
+			let check=tkhoans.some(value => value.sdt===sdt && value.mk===mk);
+			if (check) {
+				isLogin=true;
+				clogin()
+			} else {
+				alert("Số điện thoại hoặc mật khẩu sai")
+			};
+		}	
+	</script>	
+</body>
+</html>
