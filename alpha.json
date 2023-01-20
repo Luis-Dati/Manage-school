@@ -1,0 +1,26 @@
+{
+  "blogName": "homiedev",
+  "logo": "https://homiedev.com/homiedevlogo.png",
+  "categories": [
+    {
+      "name": "JavaScript",
+      "numberOfPosts": 90,
+      "link": "https://homiedev.com/tags/reactjs/"
+    },
+    {
+      "name": "TypeScript",
+      "numberOfPosts": 5,
+      "link": "https://homiedev.com/tags/typescript/"
+    },
+    {
+      "name": "ReactJS",
+      "numberOfPosts": 12,
+      "link": "https://homiedev.com/tags/reactjs/"
+    },
+  ],
+  "socialLinks": {
+    "YouTube": "https://www.youtube.com/c/Homiedev",
+    "Facebook": "https://www.facebook.com/himdevnav/",
+    "Github": "https://github.com/devnav2902"
+  }
+}
