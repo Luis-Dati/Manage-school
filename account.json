@@ -1,16 +1,17 @@
 {
-	"lop10t1": {
-		"mon10t1": {
-			"name":"wash the car",
-			"time":"21/1/2022"
-		},
-		"tue10t1": {
-			"name":"clean the floor",
-			"time":"21/3/2022"
-		}
+	"admin":{
+		"sdt":"300107",
+		"mk":"150607",
+		"role":"admin"
 	},
-	"lop10t2": {
-		"name":"clean the floor",
-		"time":"21/4/2022"
+	"sd10t1":{
+		"sdt":"0123456",
+		"mk":"12345",
+		"role":"10t1"
+	},
+	"sd10t2":{
+		"sdt":"98765",
+		"mk":"9876",
+		"role":"10t2"
 	}
 }
