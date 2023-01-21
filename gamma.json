@@ -1,0 +1,65 @@
+{
+  "mon10t1": [
+    {
+      "name_vp": "none",
+      "quantity": "0",
+      "id": 1
+    },
+    {},
+    {
+      "name_vp": "Nghỉ học CP",
+      "quantity": "3",
+      "id": 2
+    },
+    {
+      "name_vp": "Đi trễ sau tiếng trống thứ nhất",
+      "quantity": "5",
+      "id": 3
+    },
+    {
+      "name_vp": "Không sinh hoạt chào cờ",
+      "quantity": "3",
+      "id": 4
+    },
+    {
+      "name_vp": "Không đeo phù hiệu",
+      "quantity": "8",
+      "id": 5
+    }
+  ],
+  "tue10t1": [
+    {
+      "name_vp": "none",
+      "quantity": 0
+    },
+    {}
+  ],
+  "wed10t1": [
+    {
+      "name_vp": "none",
+      "quantity": 0
+    },
+    {}
+  ],
+  "thu10t1": [
+    {
+      "name_vp": "none",
+      "quantity": 0
+    },
+    {}
+  ],
+  "fri10t1": [
+    {
+      "name_vp": "none",
+      "quantity": 0
+    },
+    {}
+  ],
+  "sat10t1": [
+    {
+      "name_vp": "none",
+      "quantity": "0"
+    },
+    {}
+  ]
+}
