@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<h1>Danh sách</h1>
+		<ul id="list-courses"></ul>
+	</div>
+	<div>
+		<div>
+			<input type="text" id="name-input" placeholder="name">
+		</div>
+		<div>
+			<input type="text" id="discrip-input" placeholder="discrip">
+		</div>
+		<div>
+			<button id="create">Create</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		let courseApi="db.json";
+
+		function start() {
+			getCourse(function(course){
+				render(course);
+			});
+
+			xulyCreateForm()
+		}
+
+		start();
+
+		function getCourse(nocallback) {
+			fetch(courseApi) 
+				.then(function(response){
+					return response.json();
+				})
+				.then(nocallback);
+		}
+
+		function createCourse(data, nocallback) {
+			let option = {
+				method: "POST",
+				headers:{
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify(data)
+			};
+
+			fetch(courseApi,option)
+				.then(function(response){
+					return response.json();
+				})
+				.then(nocallback);
+		}
+
+		function render(courses) {
+			let listCoursesBlock=document.querySelector('#list-courses');
+
+			let htmls = courses.map(function(course) {
+				return `
+					<li>
+						<h4>${course.name}</h4>
+						<p>${course.discrip}</p>
+					</li>
+				`;
+			});
+			listCoursesBlock.innerHTML = htmls.join('');
+		}
+
+		function xulyCreateForm() {
+			let createBtn=document.querySelector("#create");
+
+			createBtn.onclick=function(){
+				let name=document.querySelector("#name-input").value;
+				let discrip=document.querySelector("#discrip-input").value;
+				
+				let object = {
+					name:name,
+					discrip:discrip
+				}
+				createCourse(object,function(){
+					getCourse(function(course){
+						render(course);
+					});
+				})
+			}
+		}
+
+	</script>
+</body>
+</html>
