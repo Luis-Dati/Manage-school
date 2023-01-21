@@ -85,10 +85,9 @@ function Thu2() {
 		//data này là name và slg lấy từ input
 		let option={
 				method: 'POST',
-				credentials: 'omit',
 				headers:{
 					"Content-Type": "application/json"
-			},
+				},
 				body: JSON.stringify(data)
 		};
 		
