@@ -1,5 +1,4 @@
-{
-  "course": [
+[
     {
       "name": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
       "discrip": "Inventore odio quas eos maiores doloribus eius non",
@@ -26,5 +25,4 @@
       "discrip": "it's testcase2",
       "id": 6
     }
-  ]
-}
+]
