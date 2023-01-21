@@ -58,7 +58,7 @@ case 6:
 //thu2
 
 function Thu2() {
-	let dataApi="https://luis-dati.github.io/Jsondata/Khoi10/10t1/mon10t1.json";
+	let dataApi="https://luis-dati.github.io/Manage-school/Khoi10/10t1/mon10t1.json";
 
 	function start() {
 		getData(function(datas){
