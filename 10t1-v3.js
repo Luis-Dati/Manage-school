@@ -36,6 +36,8 @@ const danhsach=[
 switch (new Date().getDay()) {
 case 0:
 	Inkq();
+        Thu2();
+        break;
 case 1:
 	Thu2();
 	break;
