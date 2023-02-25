@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="name">
+	<br>
+	<input type="text" id="clas">
+	<br>
+	<input type="text" id="role">
+	<button onclick="Sub()">Submit</button>
+	<div id="block"></div>
+</body>
+	<script>
+	function Sub() {
+		// body...
+		const name=document.querySelector("#name").value;
+		const clas=document.querySelector("#clas").value;
+		const role=document.querySelector("#role").value;
+		
+		let a=new Date;
+		let id=a.toJSON();
+
+		const user={
+			id:id,
+			name:name,
+			clas:clas,
+			roles:role
+		};
+		console.log(user);
+		let option={
+			method:"POST",
+			headers:{
+				"Content-Type":"application/json"
+			},
+			body:JSON.stringify(user),
+		};
+		fetch("http://127.0.0.1:8000/api/users",option)
+	}
+
+	const block=document.querySelector("#block");
+	fetch("http://127.0.0.1:8000/api/users")
+		.then(function(res){
+			return res.json()
+		})
+		.then(function(res){
+			let htmls=res.map(function(data){
+				return `
+					<li>
+						<div>${data.name}</div>
+						<div>${data.clas}</div>
+						<div>${data.roles}</div>
+						</br>
+					</li>
+				`
+			});
+			block.innerHTML=htmls.join("");
+			
+		})
+	</script>
+</html>
